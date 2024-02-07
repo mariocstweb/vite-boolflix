@@ -1,12 +1,25 @@
 <script>
 import SearchForm from './SearchForm.vue';
 export default {
-  name: "AppHeader"
+  name: "AppHeader",
+  components: { SearchForm },
+  methods: {
+    searchMovies(term) {
+      console.log("devo carcare", term)
+    }
+
+
+  }
 }
 </script>
 
 <template>
-  <h1 class="text-center">ciao</h1>
+  <div class="container d-flex justify-content-between p-2">
+    <div>
+      <h1>Netflix</h1>
+    </div>
+    <SearchForm @submit-search="searchMovies" />
+  </div>
 </template>
 
 <style scoped></style>
