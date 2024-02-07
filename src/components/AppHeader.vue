@@ -6,7 +6,8 @@ export default {
   methods: {
     searchMovies(term) {
       console.log("devo carcare", term)
-    }
+      this.$emit('submit-search', term);
+    },
 
 
   }
