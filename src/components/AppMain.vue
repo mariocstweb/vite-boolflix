@@ -4,8 +4,6 @@ export default {
 }
 </script>
 
-<template>
-  <h2>ciaociao</h2>
-</template>
+<template></template>
 
 <style scoped></style>
