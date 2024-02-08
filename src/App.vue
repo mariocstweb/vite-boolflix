@@ -30,19 +30,21 @@ export default {
             }
           })
         })
-    }
+    },
+    searchMovies(term) {
+      this.fetchData(movieUrl + "&query=" + term, "movies");
+      this.fetchData(seriesUrl + "&query=" + term, "series");
+    },
   },
-  created() {
-    this.fetchData(movieUrl, "movies");
-  }
 
 }
 
 </script>
 
 <template>
-  <AppHeader @submit-search="searchMovies" />
-  <AppMain />
+  <AppHeader @submitSearch="searchMovies" />
+  <AppMain :movies="movies" :series="series" />
 </template>
 
 <style scoped></style>
+
