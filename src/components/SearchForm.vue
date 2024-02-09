@@ -2,7 +2,7 @@
 export default {
   name: "SearchForm",
   data: () => ({
-    searchTerm: ""
+    searchTerm: "",
   }),
   props: {
     buttonLabel: String,

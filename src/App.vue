@@ -13,15 +13,15 @@ export default {
   }),
   components: { AppHeader, AppMain },
   methods: {
-    fetchData(endpoint, movies) {
+    fetchData(endpoint, collection) {
       // Chiamata axios
       axios.get(endpoint)
         .then((res) => {
           console.log(res.data.results)
           // Tramite map restituisco un oggetto con i dati che mi servono
-          store[movies] = res.data.results.map((element) => {
+          this[collection] = res.data.results.map((element) => {
             return {
-              id: element.id,
+              // id: element.id,
               language: element.original_language,
               title: element.title,
               originalTitle: element.original_title,
