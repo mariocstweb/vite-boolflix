@@ -35,6 +35,7 @@ export default {
 
 <template>
   <AppHeader @submitSearch="searchMovies" />
+  <!-- <AppMain :movies="movies" :series="series" /> -->
   <AppMain :movies="movies" :series="series" />
 </template>
 
